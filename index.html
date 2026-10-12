@@ -1,0 +1,818 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Avanti | Innovation Class</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Heebo:wght@700&family=Nunito+Sans:ital,opsz,wght@0,6..12,300;0,6..12,400;0,6..12,600;0,6..12,700;1,6..12,700&family=Nunito:wght@300;400;600;700&display=swap"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11.1.14/swiper-bundle.min.css"
+    />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="topbar">
+        <p class="topbar__text">
+          Ganhe <span class="topbar__highlight">R$10,00</span> de desconto no
+          seu primeiro pedido. Utilize o cupom
+          <span class="topbar__coupon">DESCONTO10</span>
+        </p>
+      </div>
+
+      <div class="header__main">
+        <div class="container header__row">
+          <!-- menu hambúrguer (aparece só no celular) -->
+          <button class="header__burger" type="button" aria-label="Menu">
+            <span></span><span></span><span></span>
+          </button>
+
+          <a href="#" class="header__logo" aria-label="Avanti - página inicial">
+            <img
+              src="assets/icons/logo.svg"
+              alt="Avanti"
+              width="154"
+              height="28"
+            />
+          </a>
+
+          <!-- busca -->
+          <form class="search" id="search-form" role="search">
+            <label for="search-input" class="sr-only">Buscar produtos</label>
+            <input
+              type="text"
+              id="search-input"
+              class="search__input"
+              placeholder="Digite aqui o que você procura"
+              autocomplete="off"
+            />
+            <button type="submit" class="search__button" aria-label="Buscar">
+              <img
+                src="assets/icons/icon-search.svg"
+                alt=""
+                width="19"
+                height="19"
+              />
+            </button>
+            <p
+              class="search__result"
+              id="search-result"
+              aria-live="polite"
+              hidden
+            ></p>
+          </form>
+
+          <div class="header__actions">
+            <a href="#" class="header__user">
+              <img
+                src="assets/icons/icon-user.svg"
+                alt=""
+                width="21"
+                height="24"
+              />
+              <span>Olá,<br />Nome cliente!</span>
+            </a>
+            <a href="#" class="header__cart" aria-label="Carrinho com 2 itens">
+              <img
+                class="d-only"
+                src="assets/icons/icon-cart.svg"
+                alt=""
+                width="25"
+                height="24"
+              />
+              <img
+                class="m-only"
+                src="assets/icons/icon-cart-mobile.svg"
+                alt=""
+                width="26"
+                height="26"
+              />
+              <span class="header__cart-badge">2</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- menu de departamentos -->
+        <nav class="container nav" aria-label="Departamentos">
+          <ul class="nav__list">
+            <li class="nav__item nav__item--all">
+              <a href="#" class="nav__link nav__link--all">
+                <span class="nav__burger" aria-hidden="true"
+                  ><span></span><span></span><span></span
+                ></span>
+                Todas as Categorias
+              </a>
+
+              <div class="mega mega--all">
+                <ul class="mega__departments">
+                  <li class="is-active"><a href="#">Departamento</a></li>
+                  <li><a href="#">Departamento</a></li>
+                  <li><a href="#">Departamento</a></li>
+                  <li><a href="#">Departamento</a></li>
+                  <li><a href="#">Departamento</a></li>
+                  <li><a href="#">Departamento</a></li>
+                  <li><a href="#">Departamento</a></li>
+                  <li><a href="#">Departamento</a></li>
+                  <li><a href="#">Departamento</a></li>
+                  <li><a href="#">Departamento</a></li>
+                </ul>
+                <div class="mega__columns" data-columns></div>
+                <a href="#" class="mega__card">
+                  <img
+                    src="assets/img/menu-card.webp"
+                    alt=""
+                    width="236"
+                    height="298"
+                    loading="lazy"
+                  />
+                  <span class="mega__card-text"
+                    >Confira os<br />Produtos<br /><strong
+                      >Que acabaram<br />De chegar</strong
+                    ></span
+                  >
+                  <span class="mega__card-button">Ver todos</span>
+                </a>
+              </div>
+            </li>
+
+            <li class="nav__item" data-department>
+              <a href="#" class="nav__link">Departamento</a>
+            </li>
+            <li class="nav__item" data-department>
+              <a href="#" class="nav__link">Departamento</a>
+            </li>
+            <li class="nav__item" data-department>
+              <a href="#" class="nav__link">Departamento</a>
+            </li>
+            <li class="nav__item" data-department>
+              <a href="#" class="nav__link">Departamento</a>
+            </li>
+            <li class="nav__item" data-department>
+              <a href="#" class="nav__link">Departamento</a>
+            </li>
+            <li class="nav__item" data-department>
+              <a href="#" class="nav__link">Departamento</a>
+            </li>
+            <li class="nav__item" data-department>
+              <a href="#" class="nav__link">Departamento</a>
+            </li>
+            <li class="nav__item" data-department>
+              <a href="#" class="nav__link">Departamento</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- banner principal -->
+      <section class="hero" aria-label="Super Sale">
+        <div class="hero__inner">
+          <picture class="hero__image">
+            <source
+              media="(max-width: 1023px)"
+              srcset="assets/img/hero-mobile.webp"
+            />
+            <img
+              src="assets/img/hero.webp"
+              alt="Roupas dobradas sobre uma cadeira"
+              width="685"
+              height="510"
+            />
+          </picture>
+          <div class="hero__text">
+            <h1 class="hero__title"><strong>Super</strong><span>Sale</span></h1>
+            <p class="hero__subtitle">
+              <span class="d-only">Itens selecionados com até</span>
+              <span class="m-only">Selected items up to</span>
+            </p>
+            <p class="hero__off">50%off</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- vitrine 1 - os cards são criados pelo main.js -->
+      <section class="showcase" aria-labelledby="showcase-1-title">
+        <div class="showcase__inner">
+          <div class="showcase__header">
+            <h2 class="showcase__title" id="showcase-1-title">Lançamentos</h2>
+            <a href="#" class="showcase__more">Ver mais</a>
+          </div>
+          <div class="showcase__carousel">
+            <button
+              class="showcase__arrow showcase__arrow--prev"
+              type="button"
+              aria-label="Produtos anteriores"
+            >
+              <img
+                src="assets/icons/arrow-prev.svg"
+                alt=""
+                width="38"
+                height="38"
+              />
+            </button>
+            <div class="swiper products-swiper">
+              <div class="swiper-wrapper" data-products></div>
+            </div>
+            <button
+              class="showcase__arrow showcase__arrow--next"
+              type="button"
+              aria-label="Próximos produtos"
+            >
+              <img
+                src="assets/icons/arrow-next.svg"
+                alt=""
+                width="38"
+                height="38"
+              />
+            </button>
+          </div>
+          <div class="showcase__dots"></div>
+        </div>
+      </section>
+
+      <!-- banner da caneca -->
+      <section class="feature">
+        <div class="feature__inner">
+          <div class="feature__media">
+            <picture>
+              <source
+                media="(max-width: 1023px)"
+                srcset="assets/img/mug-mobile.webp"
+              />
+              <img
+                src="assets/img/mug.webp"
+                alt="Caneca preta Avanti"
+                width="588"
+                height="592"
+                loading="lazy"
+              />
+            </picture>
+          </div>
+          <div class="feature__text">
+            <h2 class="feature__title">Lorem Ipsum</h2>
+            <div class="d-only">
+              <p>
+                Duis consectetur metus nec lacus auctor dignissim. Mauris vitae
+                finibus dui. Mauris laoreet lacus ut eleifend viverra. Cras
+                efficitur volutpat dui, in lobortis metus lacinia sit amet. Sed
+                lacinia pharetra magna, vel pulvinar ligula hendrerit a.
+                Maecenas fringilla porttitor tortor eget lacinia. Donec
+                sollicitudin euismod orci, auctor fringilla magna consequat
+                interdum. Fusce sagittis elit a libero commodo egestas efficitur
+                id augue.
+              </p>
+              <p>
+                Duis consectetur metus nec lacus auctor dignissim. Mauris vitae
+                finibus dui. Mauris laoreet lacus ut eleifend viverra. Cras
+                efficitur volutpat dui, in lobortis metus lacinia sit amet. Sed
+                lacinia pharetra magna, vel pulvinar ligula hendrerit a.
+                Maecenas fringilla porttitor tortor eget lacinia. Donec
+                sollicitudin euismod orci, auctor fringilla magna consequat
+                interdum. Fusce sagittis elit a libero commodo egestas efficitur
+                id augue.
+              </p>
+            </div>
+            <p class="m-only">
+              Aenean massa. Cum sociis natoque penatibus et magnis dis
+              parturient montes, nascetur ridiculus mus. Donec quam felis,
+              ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat
+              massa quis enim.<br /><br />Cras dignissim est et pellentesque
+              tincidunt. Praesent bibendum quis velit a aliquam. Ut vestibulum
+              turpis eget mi iaculis ullamcorper. Curabitur nec metus sed tortor
+              sollicitudin porta nec eu enim. Ut fermentum scelerisque tortor
+              mollis volutpat. Mauris iaculis magna nisl, vel porttitor augue
+              placerat et.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- benefícios -->
+      <section class="benefits">
+        <div class="benefits__inner">
+          <div class="benefits__content">
+            <h2 class="benefits__title">Lorem Ipsum</h2>
+            <ul class="benefits__list">
+              <li class="benefits__item">
+                <span class="benefits__icon"
+                  ><picture
+                    ><source
+                      media="(max-width: 1023px)"
+                      srcset="assets/icons/icon-pin-mobile.svg" />
+                    <img
+                      src="assets/icons/icon-pin.svg"
+                      alt=""
+                      width="45"
+                      height="45" /></picture
+                ></span>
+                <p>
+                  Aenean massa. Cum sociis natoque penatibus et magnis dis
+                  parturient montes, nascetur ridiculus mus. Donec quam felis,
+                  ultricies nec, pellentesque eu, pretium quis, sem.
+                </p>
+              </li>
+              <li class="benefits__item">
+                <span class="benefits__icon"
+                  ><picture
+                    ><source
+                      media="(max-width: 1023px)"
+                      srcset="assets/icons/icon-pin-mobile.svg" />
+                    <img
+                      src="assets/icons/icon-pin.svg"
+                      alt=""
+                      width="45"
+                      height="45" /></picture
+                ></span>
+                <p>
+                  Aenean massa. Cum sociis natoque penatibus et magnis dis
+                  parturient montes, nascetur ridiculus mus. Donec quam felis,
+                  ultricies nec, pellentesque eu, pretium quis, sem.
+                </p>
+              </li>
+              <li class="benefits__item">
+                <span class="benefits__icon"
+                  ><picture
+                    ><source
+                      media="(max-width: 1023px)"
+                      srcset="assets/icons/icon-pin-mobile.svg" />
+                    <img
+                      src="assets/icons/icon-pin.svg"
+                      alt=""
+                      width="45"
+                      height="45" /></picture
+                ></span>
+                <p>
+                  Aenean massa. Cum sociis natoque penatibus et magnis dis
+                  parturient montes, nascetur ridiculus mus. Donec quam felis,
+                  ultricies nec, pellentesque eu, pretium quis, sem.
+                </p>
+              </li>
+            </ul>
+          </div>
+          <picture class="benefits__image">
+            <source
+              media="(max-width: 1023px)"
+              srcset="assets/img/banner2-mobile.webp"
+            />
+            <img
+              src="assets/img/banner2.webp"
+              alt="Caneca Avanti sobre tábua de madeira"
+              width="652"
+              height="728"
+              loading="lazy"
+            />
+          </picture>
+        </div>
+      </section>
+
+      <!-- banner da caneca 2 -->
+      <section class="feature feature--small-mug">
+        <div class="feature__inner">
+          <div class="feature__media">
+            <picture>
+              <source
+                media="(max-width: 1023px)"
+                srcset="assets/img/mug-mobile.webp"
+              />
+              <img
+                src="assets/img/mug.webp"
+                alt="Caneca preta Avanti"
+                width="523"
+                height="528"
+                loading="lazy"
+              />
+            </picture>
+          </div>
+          <div class="feature__text">
+            <h2 class="feature__title">Lorem Ipsum</h2>
+            <div class="d-only">
+              <p>
+                Duis consectetur metus nec lacus auctor dignissim. Mauris vitae
+                finibus dui. Mauris laoreet lacus ut eleifend viverra. Cras
+                efficitur volutpat dui, in lobortis metus lacinia sit amet. Sed
+                lacinia pharetra magna, vel pulvinar ligula hendrerit a.
+                Maecenas fringilla porttitor tortor eget lacinia. Donec
+                sollicitudin euismod orci, auctor fringilla magna consequat
+                interdum. Fusce sagittis elit a libero commodo egestas efficitur
+                id augue.
+              </p>
+              <p>
+                Duis consectetur metus nec lacus auctor dignissim. Mauris vitae
+                finibus dui. Mauris laoreet lacus ut eleifend viverra. Cras
+                efficitur volutpat dui, in lobortis metus lacinia sit amet. Sed
+                lacinia pharetra magna, vel pulvinar ligula hendrerit a.
+                Maecenas fringilla porttitor tortor eget lacinia. Donec
+                sollicitudin euismod orci, auctor fringilla magna consequat
+                interdum. Fusce sagittis elit a libero commodo egestas efficitur
+                id augue.
+              </p>
+            </div>
+            <p class="m-only">
+              Aenean massa. Cum sociis natoque penatibus et magnis dis
+              parturient montes, nascetur ridiculus mus. Donec quam felis,
+              ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat
+              massa quis enim.<br /><br />Cras dignissim est et pellentesque
+              tincidunt. Praesent bibendum quis velit a aliquam. Ut vestibulum
+              turpis eget mi iaculis ullamcorper. Curabitur nec metus sed tortor
+              sollicitudin porta nec eu enim. Ut fermentum scelerisque tortor
+              mollis volutpat. Mauris iaculis magna nisl, vel porttitor augue
+              placerat et.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- vitrine 2 (no celular ela não aparece) -->
+      <section
+        class="showcase showcase--second"
+        aria-labelledby="showcase-2-title"
+      >
+        <div class="showcase__inner">
+          <div class="showcase__header">
+            <h2 class="showcase__title" id="showcase-2-title">Lançamentos</h2>
+            <a href="#" class="showcase__more">Ver mais</a>
+          </div>
+          <div class="showcase__carousel">
+            <button
+              class="showcase__arrow showcase__arrow--prev"
+              type="button"
+              aria-label="Produtos anteriores"
+            >
+              <img
+                src="assets/icons/arrow-prev.svg"
+                alt=""
+                width="38"
+                height="38"
+              />
+            </button>
+            <div class="swiper products-swiper">
+              <div class="swiper-wrapper" data-products></div>
+            </div>
+            <button
+              class="showcase__arrow showcase__arrow--next"
+              type="button"
+              aria-label="Próximos produtos"
+            >
+              <img
+                src="assets/icons/arrow-next.svg"
+                alt=""
+                width="38"
+                height="38"
+              />
+            </button>
+          </div>
+          <div class="showcase__dots"></div>
+        </div>
+      </section>
+
+      <!-- contato -->
+      <section class="contact">
+        <picture class="contact__bg">
+          <source
+            media="(max-width: 1023px)"
+            srcset="assets/img/contact-bg-mobile.webp"
+          />
+          <img
+            src="assets/img/contact-bg.webp"
+            alt=""
+            width="1920"
+            height="660"
+            loading="lazy"
+          />
+        </picture>
+        <div class="contact__strip">
+          <p>
+            Entre em contato conosco e verifique a disponibilidade para sua
+            região!
+          </p>
+        </div>
+      </section>
+
+      <!-- newsletter -->
+      <section class="newsletter" aria-labelledby="newsletter-title">
+        <h2 class="newsletter__title" id="newsletter-title">
+          Cadastre-se na nossa <span>newsletter</span>
+        </h2>
+        <form class="newsletter__form" id="newsletter-form">
+          <label class="sr-only" for="nl-name">Nome</label>
+          <input
+            class="newsletter__input"
+            type="text"
+            id="nl-name"
+            placeholder="Digite seu nome"
+            required
+          />
+          <label class="sr-only" for="nl-email">E-mail</label>
+          <input
+            class="newsletter__input"
+            type="email"
+            id="nl-email"
+            placeholder="Digite seu e-mail"
+            required
+          />
+          <label class="newsletter__check">
+            <input type="checkbox" required />
+            <span class="newsletter__checkbox" aria-hidden="true"></span>
+            <span
+              >Estou de acordo com a
+              <a href="#">Política de Privacidade</a></span
+            >
+          </label>
+          <button class="newsletter__button" type="submit">Cadastrar</button>
+        </form>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer__top">
+        <div class="footer__inner">
+          <div class="footer__brand">
+            <img
+              class="footer__logo"
+              src="assets/icons/footer-logo.svg"
+              alt="Avanti"
+              width="153"
+              height="27"
+              loading="lazy"
+            />
+            <p class="footer__follow">Siga nossas redes sociais</p>
+            <ul class="footer__social">
+              <li>
+                <a href="#" aria-label="Instagram"
+                  ><img
+                    src="assets/icons/social-instagram.svg"
+                    alt=""
+                    width="19"
+                    height="20"
+                /></a>
+              </li>
+              <li>
+                <a href="#" aria-label="Facebook"
+                  ><img
+                    src="assets/icons/social-facebook.svg"
+                    alt=""
+                    width="11"
+                    height="23"
+                /></a>
+              </li>
+              <li>
+                <a href="#" aria-label="YouTube"
+                  ><img
+                    src="assets/icons/social-youtube.svg"
+                    alt=""
+                    width="26"
+                    height="26"
+                /></a>
+              </li>
+              <li>
+                <a href="#" aria-label="TikTok"
+                  ><img
+                    src="assets/icons/social-tiktok.svg"
+                    alt=""
+                    width="19"
+                    height="21"
+                /></a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__col">
+            <p class="footer__heading">
+              <span class="tag d-only">&lt;h4&gt;</span
+              ><span class="tag m-only">&lt;h5&gt;</span>
+              <span>Institucional</span>
+            </p>
+            <ul class="footer__links">
+              <li>
+                <span class="tag">&lt;h5&gt;</span> <a href="#">Sobre Nós</a>
+              </li>
+              <li>
+                <span class="tag">&lt;h5&gt;</span> <a href="#">Nossas Lojas</a>
+              </li>
+              <li>
+                <span class="tag">&lt;h5&gt;</span>
+                <a href="#">Privacidade e Segurança</a>
+              </li>
+              <li>
+                <span class="tag">&lt;h5&gt;</span>
+                <a href="#">Termos e Condições</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__col">
+            <p class="footer__heading">
+              <span class="tag d-only">&lt;h4&gt;</span
+              ><span class="tag m-only">&lt;h5&gt;</span>
+              <span>Central de ajuda</span>
+            </p>
+            <ul class="footer__links">
+              <li>
+                <span class="tag">&lt;h5&gt;</span> <a href="#">Fale Conosco</a>
+              </li>
+              <li>
+                <span class="tag">&lt;h5&gt;</span>
+                <a href="#">Frete e Entrega</a>
+              </li>
+              <li>
+                <span class="tag">&lt;h5&gt;</span>
+                <a href="#">Trocas e Devoluções</a>
+              </li>
+              <li>
+                <span class="tag">&lt;h5&gt;</span>
+                <a href="#">Formas de Pagamento</a>
+              </li>
+              <li><span class="tag">&lt;h5&gt;</span> <a href="#">FAQ</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__col">
+            <p class="footer__heading">
+              <span class="tag d-only">&lt;h4&gt;</span
+              ><span class="tag m-only">&lt;h5&gt;</span>
+              <span>Atendimento</span>
+            </p>
+            <ul class="footer__links footer__links--contact">
+              <li>
+                <span class="tag">&lt;h5&gt;</span>
+                <strong>Telefone:</strong> (00) 1234-5678
+              </li>
+              <li>
+                <span class="tag">&lt;h5&gt;</span>
+                <strong>E-mail:</strong> exemplo@exemplo.com.br
+              </li>
+              <li class="footer__hours">
+                <span class="tag">&lt;h5&gt;</span>
+                <strong>Horário de atendimento:</strong>
+                <span class="footer__hours-text"
+                  >Segunda a Sábado: 07h00 às 23h00<br />Domingos e Feriados:
+                  07h00 às 21h00</span
+                >
+              </li>
+            </ul>
+          </div>
+
+          <ul class="footer__payments" aria-label="Formas de pagamento">
+            <li>
+              <img
+                src="assets/icons/pay-amex.svg"
+                alt="American Express"
+                width="27"
+                height="19"
+                loading="lazy"
+              />
+            </li>
+            <li>
+              <img
+                src="assets/icons/pay-mastercard.svg"
+                alt="Mastercard"
+                width="27"
+                height="16"
+                loading="lazy"
+              />
+            </li>
+            <li>
+              <img
+                src="assets/icons/pay-visa.svg"
+                alt="Visa"
+                width="34"
+                height="10"
+                loading="lazy"
+              />
+            </li>
+            <li>
+              <img
+                src="assets/icons/pay-hipercard.svg"
+                alt="Hipercard"
+                width="36"
+                height="15"
+                loading="lazy"
+              />
+            </li>
+            <li>
+              <img
+                src="assets/icons/pay-elo.svg"
+                alt="Elo"
+                width="33"
+                height="13"
+                loading="lazy"
+              />
+            </li>
+            <li class="footer__payments-break">
+              <img
+                src="assets/icons/pay-diners.svg"
+                alt="Diners Club"
+                width="30"
+                height="19"
+                loading="lazy"
+              />
+            </li>
+            <li>
+              <img
+                src="assets/icons/pay-paypal.svg"
+                alt="PayPal"
+                width="33"
+                height="9"
+                loading="lazy"
+              />
+            </li>
+            <li>
+              <img
+                src="assets/icons/pay-pix.svg"
+                alt="Pix"
+                width="24"
+                height="23"
+                loading="lazy"
+              />
+            </li>
+            <li>
+              <img
+                src="assets/icons/pay-boleto.svg"
+                alt="Boleto"
+                width="37"
+                height="24"
+                loading="lazy"
+              />
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__legal">
+          <span class="d-only"
+            >Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+            nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+            volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
+            ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
+            consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate
+            velit esse molestie consequat, vel illum dolore eu feugiat nulla
+            facilisis at vero eros et accumsan et iusto odio dignissim qui
+            blandit praesent luptatum zzril delenit augue duis dolore te feugait
+            nulla facilisi.</span
+          >
+          <span class="m-only"
+            >Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+            nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat
+            volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci.</span
+          >
+        </p>
+        <ul class="footer__seals">
+          <li>
+            <img
+              src="assets/icons/seal-letsencrypt.svg"
+              alt="Let's Encrypt"
+              width="39"
+              height="30"
+              loading="lazy"
+            />
+          </li>
+          <li>
+            <img
+              src="assets/img/seal-vtex-pci.png"
+              alt="VTEX PCI Certified"
+              width="51"
+              height="32"
+              loading="lazy"
+            />
+          </li>
+          <li class="footer__seals-divider" aria-hidden="true"></li>
+          <li>
+            <img
+              src="assets/icons/seal-avanti.svg"
+              alt="Avanti"
+              width="57"
+              height="10"
+              loading="lazy"
+            />
+          </li>
+          <li>
+            <img
+              src="assets/icons/seal-vtex.svg"
+              alt="VTEX"
+              width="53"
+              height="19"
+              loading="lazy"
+            />
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <!-- biblioteca Swiper pros carrosséis -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11.1.14/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
