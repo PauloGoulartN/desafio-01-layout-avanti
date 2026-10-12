@@ -2,6 +2,8 @@
 
 Landing page desenvolvida a partir do layout do Figma, com versões **desktop** e **mobile**.
 
+**Acesse:** https://paulogoulartn.github.io/desafio-01-layout-avanti/
+
 ![Prévia](preview.jpg)
 
 ## Tecnologias
